@@ -1,7 +1,7 @@
-941944ea77404d8064a161337ab318f4 *DESCRIPTION
-b1259c5dc85349178e1f92aba8dfb2e9 *NAMESPACE
+974a84f0d7726b1fdf1137695ebfc60f *DESCRIPTION
+16a82ad6c00462a9cc269d729fe05d41 *NAMESPACE
 81d6c86f59d4a09492adb502f3915bd7 *R/criterionRkh.R
-772a0aeffd4b533ce5704435aebc145a *R/edr.R
+1c0ffa58cbbf0d2535a516709b6627b6 *R/edr.R
 946ec0a1c42e1ad7f109bcaf159580b0 *R/edrGraphicalTools-internal.R
 e14c070f9da76dcd9358ec6fb5c8181f *R/edrSelec.R
 e0669c110761b69e0b85ad76bbf2a9b4 *R/plot.criterionRkh.R
@@ -10,7 +10,6 @@ faa37bae4316b7a7e6826e7584de8b44 *R/print.criterionRkh.R
 d032f8e942cfdf4dd674fff403578d15 *R/print.edr.R
 c66eed862554d98d76a2e1eb967721ee *R/summary.criterionRkh.R
 a615e23d89b9301ae2112bcb0bbf214a *R/summary.edr.R
-81d116b130deefd76105c8a31eaef197 *edrGraphicalTools-Ex.R
 bd09ba943c6777a44f89ecd29f50120c *man/criterionRkh.Rd
 1874ee7836a8ceff82360ff140fcadd6 *man/edr.Rd
 2b9543091bee86f7eeb3edad77d6d134 *man/edrGraphicalTools-package.Rd

@@ -113,7 +113,6 @@ edrUnderdet <- function(Y, X, H, K, method, initEDR=NULL, maxIter=NULL,
 
 
 
-	library(MASS)
 	tol <- 1e-6
 
 	#Vérification des paramètres d'entrée
