@@ -126,3 +126,92 @@ c(403L, 10L, 261025702L, 289862591L, -2032470099L, -969345675L,
 1530831801L, 44490977L, 545438013L)
 .required <-
 c("rgl", "mvtnorm")
+
+#Vérifie que les variables nécessaires à l'exécution d'une méthode de réduction
+#de dimension sont correctement entrées
+.check.param <- function(Y, X, H, K, method){
+
+	if(!is.matrix(X) | any(dim(X) == 1)) {
+		stop("X should be a matrix with at least 2 rows and 2 columns.")
+	}
+	if(all(!is.vector(Y),  dim(Y)[2]!=1)){
+		stop("Y should be a vector or a matrix with a single column.")
+	}
+	if((any(is.na(X))==T)|(any(is.na(Y))==T))
+		stop("The data should not contained missing value")
+	if(length(Y)!=dim(X)[1]) 
+		stop("Y and X should have the same number of row")
+	n<-length(Y)
+	p<-ncol(X)
+	if(missing(H))
+		stop("The number of slices should be specified")
+	if(missing(K))
+		stop("The dimension of the reduction should be specified ")
+	if(missing(method))
+		stop("the method should be specified")
+	if(!(method %in% c("SIR-I","SIR-II","SAVE")))
+		stop("the method should be specified by SIR-I or SIR-II or SAVE")
+	
+	list(n=n,p=p)
+}
+
+# R implementation of the DGGEV LAPACK function 
+# See http://www.netlib.org/lapack/double/dggev.f
+# Raphaël Coudret, 8 juin 2013
+# Contributions from Jonathan A. Greenberg and Berend Hasselman.
+.Rdggev <- function(A,B,jobVL=FALSE,jobVR=TRUE) {
+  
+ 
+	#Testing imputs
+	if(!is.matrix(A)) stop("Argument A should be a matrix.")
+  if(!is.matrix(B)) stop("Argument B should be a matrix.")
+	p <- nrow(A)
+  if(diff(dim(A)) != 0) stop("A must be a square matrix.")
+  if(diff(dim(B)) != 0) stop("B must be a square matrix.")
+  if(p!=nrow(B)) stop("A and B must have the same dimensions.")
+  if( is.complex(A) ) stop("A may not be complex.")
+  if( is.complex(B) ) stop("B may not be complex.")
+ 
+	result <- .Call("Cdggev", A, B, jobVL, jobVR, package="edrGraphicalTools")
+	if (jobVL) {
+		result$vl <- matrix(result$vl, nrow=p)
+	}
+	if (jobVR) {
+		result$vr <- matrix(result$vr, nrow=p)
+	}
+
+	# simplistic calculation of eigenvalues 
+	#(see caveat in http://www.netlib.org/lapack/double/dggev.f)
+  if( all(result$alphai==0) ) {
+    result$lambda <- result$alphar/result$beta
+  } else { 
+    result$lambda <- complex(real=result$alphar, 
+			imaginary=result$alphai)/result$beta
+  }
+  return(result)
+}
+
+#Calcul des directions EDR pour une matrice de variance-covariance Sigma donnée
+#et les normalise à la manière de Zhong et al.
+.edrNorm <- function(M, Sigma, K) {
+	
+	tol <- 1e-6		
+
+	temp <- .Rdggev(M, Sigma)
+	index <- sort(temp$lambda, index.return=TRUE, decreasing=TRUE)$ix
+	#Dans la version initiale de P. Zeng, on avait l'équivalent de
+	# matEDR <- temp$vr[,index[1:p]]
+	#Toutefois Rdggev ne renvoie pas toujours p vecteurs propres.
+	matEDR <- as.matrix(temp$vr[,index[1:K]])
+	normalize <- t(matEDR) %*% Sigma %*% matEDR
+	normalize <- diag(as.matrix(normalize))
+	cache <- abs(normalize) < tol
+	normalize[!cache] <- 1/normalize[!cache]
+	normalize <- diag(sqrt(normalize[!cache]),sum(!cache))
+	matEDR[,!cache] <- matEDR[,!cache] %*% normalize
+	eigVal <- temp$lambda[index[1:K]]		
+
+	list(matEDR=matEDR, eigVal=eigVal)
+}
+
+

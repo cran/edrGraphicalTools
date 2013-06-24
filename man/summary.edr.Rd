@@ -2,7 +2,7 @@
 \alias{summary.edr}
 
 \title{
-Print a Summary of a edr Object
+Print a Summary of an edr Object
 }
 \description{
 This is a method for the function summary for objects of the class \code{edr}.
@@ -25,7 +25,7 @@ further arguments passed to or from other methods.
 A summary of the \code{edr} Object is returned.
 }
 \author{
-Benoit Liquet, <benoit.liquet@isped.u-bordeaux2.fr> and Jerome Saracco <jerome.saracco@math.u-bordeaux1.fr>
+Benoît Liquet, <benoit.liquet@isped.u-bordeaux2.fr> and Jérôme Saracco <jerome.saracco@math.u-bordeaux1.fr>
 }
 
 \seealso{

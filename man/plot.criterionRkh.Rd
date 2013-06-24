@@ -32,11 +32,10 @@ of H specified in the \code{criterionRkh} object. The values of \code{choice.K} 
 Returns  graphs.
 }
 \references{
-Liquet B. and Saracco, J., A graphical tool for selecting the number of
-slices and the dimension of the model in SIR and SAVE approaches. \emph{Revised paper}
+Liquet, B. and Saracco, J. (2012). A graphical tool for selecting the number of slices and the dimension of the model in SIR and SAVE approaches. \emph{Computational Statistics}, 27(1), 103-125.
 }
 \author{
-Benoit Liquet, <benoit.liquet@isped.u-bordeaux2.fr> and Jerome Saracco <jerome.saracco@math.u-bordeaux1.fr>
+Benoît Liquet, <benoit.liquet@isped.u-bordeaux2.fr> and Jérôme Saracco <jerome.saracco@math.u-bordeaux1.fr>
 }
 
 

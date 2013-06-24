@@ -19,7 +19,7 @@ cat(x$H)
 cat(" \n")
 cat(" \n")
 
-cat("Result of the bootsrap estimate of the trace criterion R(H,K) \n" )
+cat("Result of the bootsrap estimate of the trace criterion R(k,h) \n" )
 
 tmp <- x$Rkhbootmean
 row.names(tmp) <- x$H

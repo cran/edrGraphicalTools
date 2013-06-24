@@ -2,7 +2,7 @@
 \alias{plot.edr}
 
 \title{
-Basic plot of a edr object
+Basic plot of an edr object
 }
 \description{
 For an \code{edr} object with attributes \code{K} <= 2, this function plots the response y versus each 
@@ -24,7 +24,7 @@ The name of an object of class \code{\link{edr}}.
 Returns graphs.
 }
 
-\author{Benoit Liquet, <benoit.liquet@isped.u-bordeaux2.fr> and Jerome Saracco <jerome.saracco@math.u-bordeaux1.fr>}
+\author{Benoît Liquet, <benoit.liquet@isped.u-bordeaux2.fr> and Jérôme Saracco <jerome.saracco@math.u-bordeaux1.fr>}
 
 
 \seealso{
