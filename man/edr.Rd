@@ -105,7 +105,7 @@ Y <- (X\%*\%beta1)**2+(X\%*\%beta2)**2+eps
 ## Estimation of the EDR direction for K=2 and H=2 and SIR-II method
 edr2 <- edr(Y,X,H=2,K=2,method="SIR-II")
 summary(edr2)
-plot(edr2)
+#plot(edr2)
 }
 
 \keyword{ regression }

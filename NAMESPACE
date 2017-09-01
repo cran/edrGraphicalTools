@@ -12,4 +12,9 @@ import(rgl)
 import(mvtnorm)
 import(MASS)
 import(lasso2)
-useDynLib(edrGraphicalTools)
+importFrom("grDevices", "dev.new")
+importFrom("graphics", "axis", "boxplot", "lines", "pairs",
+             "panel.smooth", "par", "plot", "text")
+importFrom("stats", "coef", "cor", "fitted", "ksmooth", "loess",
+             "pchisq", "predict", "princomp", "var")
+useDynLib(edrGraphicalTools,.registration=TRUE)

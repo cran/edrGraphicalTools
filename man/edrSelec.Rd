@@ -73,7 +73,7 @@ The "RSIR" procedure uses an asymptotic test on each element of the estimated
 EDR directions. 
 It was translated from a Matlab code made by Peng Zeng.
 The "SR-SIR" procedure relies on a lasso penalty. The underlying parameter is chosen using the residual information criterion (RIC).
-It was written using a R code made by Lexin Li. See also \url{http://www4.stat.ncsu.edu/~li/software.html}.
+It was written using a R code made by Lexin Li. 
 }
                   
 \value{
@@ -107,7 +107,7 @@ sliced inverse regression for motif discovery. \emph{Bioinformatics}, 21(22):416
 
 }
 
-\author{Raphaël Coudret <rcoudret@gmail.com>, Benoît Liquet <benoit.liquet@isped.u-bordeaux2.fr> and Jérôme Saracco <jerome.saracco@math.u-bordeaux1.fr>}
+\author{Raphaël Coudret <rcoudret@gmail.com>, Benoît Liquet <benoit.liquet@univ-pau.fr> and Jérôme Saracco <jerome.saracco@math.u-bordeaux1.fr>}
 
 %\note{}
 
@@ -117,6 +117,7 @@ sliced inverse regression for motif discovery. \emph{Bioinformatics}, 21(22):416
 
 
 \examples{
+	\dontrun{
 n <- 100
 p <- 110
 K <- 1
@@ -131,7 +132,7 @@ eps <- rnorm(n,sd=10)
 Y <- (X\%*\%beta)^3+eps
 result <- edrSelec(Y,X,H,K,"CSS",NZero=NZero, pZero=pZero, zeta=zeta)
 summary(result)
-plot(result)
+plot(result)}
 
 }
 

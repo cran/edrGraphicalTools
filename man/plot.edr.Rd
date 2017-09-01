@@ -40,7 +40,7 @@ X <- rmvnorm(n,sigma=diag(1,10))
 eps <- rnorm(n)
 Y <- (X\%*\%beta1)**2+(X\%*\%beta2)**2+eps
 edr2 <- edr(Y,X,H=2,K=2,method="SIR-II")
-plot(edr2)
+#plot(edr2)
 ## edr4 <- edr(Y,X,H=2,K=4,method="SIR-II")
 ## plot(edr4)
 

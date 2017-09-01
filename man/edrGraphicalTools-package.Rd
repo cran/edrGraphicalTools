@@ -50,7 +50,7 @@ Y <- (X\%*\%beta)**3+eps*((X\%*\%beta)**2)
 grid.H <- c(2,5,10,15,20)
 grid.K <- 1:p
 res1 <- criterionRkh(Y,X,H=grid.H,K=grid.K,B=50,method="SIR-I")
-plot(res1,choice.H=c(2,5),choice.K=c(1,2))
+#plot(res1,choice.H=c(2,5),choice.K=c(1,2))
 HK <- which(res1$Rkhbootmean[,1:(p-1)] == max(res1$Rkhbootmean[,1:(p-1)]),
 	arr.ind=TRUE)[1,]
 H  <- grid.H[HK[1]]

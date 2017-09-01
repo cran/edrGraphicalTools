@@ -61,7 +61,7 @@ This character string specifies the method of fitting. It should be either "SIR-
 The "RSIR" procedure uses a bootstrap estimator of the mean squared error of regularized estimates of the EDR directions.
 It was translated from a Matlab code made by Peng Zeng.
 The "SR-SIR" procedure relies on a generalized cross-validation criterion and on an alternating least squares algorithm to find an optimal regularization parameter.
-It was written using a R code made by Lexin Li. See also \url{http://www4.stat.ncsu.edu/~li/software.html}.
+It was written using a R code made by Lexin Li.
 }
                   
 \value{
@@ -95,7 +95,7 @@ sliced inverse regression for motif discovery. \emph{Bioinformatics}, 21(22):416
 
 }
 
-\author{Raphaël Coudret <rcoudret@gmail.com>, Benoît Liquet <benoit.liquet@isped.u-bordeaux2.fr> and Jérôme Saracco <jerome.saracco@math.u-bordeaux1.fr>}
+\author{Raphaël Coudret <rcoudret@gmail.com>, Benoît Liquet <benoit.liquet@univ-pau.fr> and Jérôme Saracco <jerome.saracco@math.u-bordeaux1.fr>}
 
 %\note{}
 
@@ -105,7 +105,7 @@ sliced inverse regression for motif discovery. \emph{Bioinformatics}, 21(22):416
 
 
 \examples{
-
+\dontrun{
 n <- 100
 p <- 200
 K <- 2
@@ -118,7 +118,7 @@ Y <- (X\%*\%beta1)^3 + (X\%*\%beta2)^3+eps
 result <- edrUnderdet(Y,X,H,K,"SIR-QZ")
 summary(result)
 plot(result)
-
+}
 }
 
 \keyword{ nonlinear }

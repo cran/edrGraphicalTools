@@ -97,7 +97,7 @@ Y <- (X\%*\%beta)**3+eps*((X\%*\%beta)**2)
 grid.H <- c(2,5,10,15,20,30)
 res1 <- criterionRkh(Y,X,H=grid.H,B=50,method="SIR-I")
 res1
-plot(res1,choice.H=c(2,5),choice.K=c(1,2))
+#plot(res1,choice.H=c(2,5),choice.K=c(1,2))
 ## Estimation for SIR-II method with the same bootstrap replicate than for SIR-I
 res2 <- criterionRkh(Y,X,H=grid.H,indices=res1$indices,B=50,method="SIR-II")
 res2

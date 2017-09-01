@@ -1,19 +1,16 @@
 Package: edrGraphicalTools
 Type: Package
-Title: Provides tools for dimension reduction methods
-Version: 2.1
-Date: 2013-06-24
+Title: Provides Tools for Dimension Reduction Methods
+Version: 2.2
+Date: 2017-08-29
 Author: Raphaël Coudret, Benoît Liquet and Jérôme Saracco
-Maintainer: Benoit Liquet <benoit.liquet@isped.u-bordeaux2.fr>
-Description: This package comes to illustrate the articles "A graphical
-        tool for selecting the number of slices and the dimension of
-        the model in SIR and SAVE approaches" and "Comparison of sliced
-        inverse regression approaches for underdetermined cases"
+Maintainer: Benoit Liquet <benoit.liquet@univ-pau.fr>
+Description: Reduction methods through slice inverse regression approaches. It mainly designed for illustrating the articles "A graphical tool for selecting the number of slices and the dimension of the model in SIR and SAVE approaches" (Liquet, B., Saracco, J. (2012) <doi:10.1007/s00180-011-0241-9>) and "Comparison of sliced inverse regression approaches for underdetermined cases”.  
 License: GPL (>= 2.0)
 Depends: rgl, mvtnorm, MASS, lasso2
 LazyLoad: yes
 Encoding: UTF-8
-Packaged: 2013-11-09 05:36:47 UTC; liquet
 NeedsCompilation: yes
+Packaged: 2017-08-29 06:52:20 UTC; liquetwe
 Repository: CRAN
-Date/Publication: 2013-11-09 07:59:11
+Date/Publication: 2017-09-01 11:24:54 UTC

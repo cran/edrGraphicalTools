@@ -172,7 +172,7 @@ c("rgl", "mvtnorm")
   if( is.complex(A) ) stop("A may not be complex.")
   if( is.complex(B) ) stop("B may not be complex.")
  
-	result <- .Call("Cdggev", A, B, jobVL, jobVR, package="edrGraphicalTools")
+	result <- .Call("Cdggev", A, B, jobVL, jobVR, PACKAGE="edrGraphicalTools")
 	if (jobVL) {
 		result$vl <- matrix(result$vl, nrow=p)
 	}

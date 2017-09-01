@@ -1,8 +1,8 @@
-974a84f0d7726b1fdf1137695ebfc60f *DESCRIPTION
-16a82ad6c00462a9cc269d729fe05d41 *NAMESPACE
+ea41f3699c17af13f81e803ab0cd0104 *DESCRIPTION
+15fcd7ecbe8d951bacce95eba8678f33 *NAMESPACE
 81d6c86f59d4a09492adb502f3915bd7 *R/criterionRkh.R
 1c0ffa58cbbf0d2535a516709b6627b6 *R/edr.R
-946ec0a1c42e1ad7f109bcaf159580b0 *R/edrGraphicalTools-internal.R
+e6cf7ba841857aad8b2d85b08af6a3d4 *R/edrGraphicalTools-internal.R
 e14c070f9da76dcd9358ec6fb5c8181f *R/edrSelec.R
 e0669c110761b69e0b85ad76bbf2a9b4 *R/plot.criterionRkh.R
 1486045c23cba95dd53224c1dde95e37 *R/plot.edr.R
@@ -10,13 +10,13 @@ faa37bae4316b7a7e6826e7584de8b44 *R/print.criterionRkh.R
 d032f8e942cfdf4dd674fff403578d15 *R/print.edr.R
 c66eed862554d98d76a2e1eb967721ee *R/summary.criterionRkh.R
 a615e23d89b9301ae2112bcb0bbf214a *R/summary.edr.R
-bd09ba943c6777a44f89ecd29f50120c *man/criterionRkh.Rd
-1874ee7836a8ceff82360ff140fcadd6 *man/edr.Rd
-2b9543091bee86f7eeb3edad77d6d134 *man/edrGraphicalTools-package.Rd
-f42e47b9371ef8c810535a097a235e2a *man/edrSelec.Rd
-2589c601335a72c05c559b748ff06d30 *man/edrUnderdet.Rd
+a00536c9dc540fd8977089864361230e *man/criterionRkh.Rd
+5098b2be77e6413224b051167cb2a6b3 *man/edr.Rd
+78c278e6907e64d68d3fc87d8e8a1f9e *man/edrGraphicalTools-package.Rd
+332b64151606b30eb310efeba9da4477 *man/edrSelec.Rd
+f4e2b5fb28fa8afe95768d2a9012605a *man/edrUnderdet.Rd
 b08ffbedfb8801d2f36d23732cf29846 *man/plot.criterionRkh.Rd
-e3b2d55dcb6a1d0eb0ddd496871ee011 *man/plot.edr.Rd
+f55e3214d5685d64a045e82bac66c87e *man/plot.edr.Rd
 95ddcfc8788b51e2b1aff4ca50ec679a *man/print.criterionRkh.Rd
 6cc1b427d5c2bdb15fdf4c03eda4d3b6 *man/print.edr.Rd
 dfa67a050c2531b55fd4ffa1d254e813 *man/print.edrSelec.Rd
@@ -24,4 +24,4 @@ dfa67a050c2531b55fd4ffa1d254e813 *man/print.edrSelec.Rd
 771f9491335c5fef9197ded9d00fcffd *man/summary.criterionRkh.Rd
 b7fa49c136452e3004c2528428fcf717 *man/summary.edr.Rd
 9bc5aa7d4334d43640f515c9a1fd70bd *src/Makevars
-e4e3c602580d85c527d13db72e5905f3 *src/dggev.c
+816f6f6c09920535dfebf82e2fb6584e *src/dggev.c

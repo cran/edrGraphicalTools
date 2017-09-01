@@ -1,9 +1,22 @@
+// RegisteringDynamic Symbols
+
+#include <R.h>
+#include <Rinternals.h>
+#include <R_ext/Rdynload.h>
+
+
 #include <string.h> /* strcpy() */
 #include <stdlib.h> /* free() */
-#include <R.h>
+// #include <R.h>
 #include <Rdefines.h>
 #include <R_ext/Parse.h>
 #include <R_ext/Lapack.h>
+
+
+void R_init_markovchain(DllInfo* info) {
+  R_registerRoutines(info, NULL, NULL, NULL, NULL);
+  R_useDynamicSymbols(info, TRUE);
+}
 
 //Fonction pour pouvoir exécuter la fonction "dggev" de la bibliothèque Fortran "LAPACK".
 //Cette fonction permet d'utiliser l'algorithme QZ pour pouvoir calculer les 
